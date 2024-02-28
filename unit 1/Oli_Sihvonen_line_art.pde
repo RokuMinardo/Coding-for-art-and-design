@@ -1,3 +1,5 @@
+// https://whitney.org/artists/1219
+
 void setup(){
   size(444,444);
  
