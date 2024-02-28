@@ -1,3 +1,5 @@
+//https://gamefaqs.gamespot.com/psp/991479-monster-hunter-portable-3rd/map/7530-deserted-island-resource-map
+
 void setup() {
 
   size(555, 555);
