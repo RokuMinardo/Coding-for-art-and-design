@@ -1,26 +1,27 @@
-PFont NotoSans;
+  PFont NotoSans;
+
 
 void setup(){
   
 
  
   size(555,555);
-  
-  
+  NotoSans = loadFont("NotoSans-LightItalic-128.vlw");
 }
 
 
 void draw(){
   
-  
+
+
 
   
   background(0);
   
-  textSize(128);
-  text("LOST    IN" ,16,290);
+  textFont(NotoSans);
+  text("LOST    IN" ,25,286);
   
-  text("PARADISE" ,11,351);
+  text("PARADISE" ,1,351);
   
   
   
