@@ -1,3 +1,5 @@
+//Did another to test out how the mouse can react to the screen in different ways like clicks or scroll wheel.
+
 void setup(){
   
   size(555, 555);

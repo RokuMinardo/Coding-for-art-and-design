@@ -1,3 +1,6 @@
+//Wanted to test out how to make the mouse move 2 different objects going in different ways.
+//OBJECTION! This reminds me of the judges hammer
+
 void setup() {
   size(555, 555);
   

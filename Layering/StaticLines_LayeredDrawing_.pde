@@ -1,4 +1,5 @@
 // TITLE: Static line
+//This is a test to see if I can get a static like effect using lines which created a more sketchbook like effect.
 
 void setup() {
   size(555,555);

@@ -1,3 +1,5 @@
+//Go follow my Instagram, YouTube, and Itch account @Star Of Steel!
+
 PImage min1;
 PImage min2;
 PImage min3;

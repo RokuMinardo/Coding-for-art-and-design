@@ -1,3 +1,5 @@
+//Went for a hypno like design using circles and squares.
+
 int totalFrames = 120;
 int counter = 0;
 
