@@ -20,7 +20,7 @@ min4 = loadImage ("min 4.png");
 }
 
 
-
+//Images based on my Social media
 void draw() {
   
   background(0); 

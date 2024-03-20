@@ -6,6 +6,7 @@ void setup() {
   
 }
 
+//circle and squares
 void draw() {
   background(90);
   fill(150);

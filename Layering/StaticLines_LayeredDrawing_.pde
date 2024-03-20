@@ -8,6 +8,7 @@ void setup() {
 
 }
 
+//Lines going in different directions canceling out eachother creating this cool sketchy effect
 void draw() {
   PVector start = new PVector(random(width), random(height));
   PVector end = new PVector(random(width), random(height));

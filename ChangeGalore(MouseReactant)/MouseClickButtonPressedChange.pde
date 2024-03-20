@@ -6,12 +6,14 @@ void setup(){
   background(0,50,0);
 }
 
+//Testing with drawing like applications
 void draw() {
   stroke(255);
   line(pmouseX, pmouseY, mouseX, mouseY);
   
 }
 
+//Like a fill/ delete option
 void mousePressed() {
   background(0,0,50);
 }

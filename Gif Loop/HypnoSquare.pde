@@ -8,6 +8,7 @@ void setup() {
   
 }
 
+Exiting frames after code is done
 void draw() {
  
   float percent = float(counter) / totalFrames;
@@ -18,7 +19,6 @@ void draw() {
     exit();
   }
 }
-
 
   //squares in a gif
   //simple loop
