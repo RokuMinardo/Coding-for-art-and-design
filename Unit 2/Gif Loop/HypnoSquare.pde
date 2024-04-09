@@ -8,7 +8,7 @@ void setup() {
   
 }
 
-Exiting frames after code is done
+//Exiting frames after code is done
 void draw() {
  
   float percent = float(counter) / totalFrames;
