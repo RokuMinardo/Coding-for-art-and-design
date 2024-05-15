@@ -1,4 +1,5 @@
 //In this clock there are 3 components that tell when a second, minute, and hour have passed.
+//I went a little on the creative side more than the practical side of things as it's what I wanted
 //Images switching over every second.
 //Music going faster and faster and resets once a minute passes by.
 //Dot changes color by the hour.
@@ -73,8 +74,8 @@ void setup() {
 void draw() {
     background(164);
 
-    dotX = width / 2;
-    dotY = height / 2;
+    dotX = width / 1.5;
+    dotY = height / 1.5;
     //Minute Started
     int s = second();
     float timeLeft = 60 - s;
