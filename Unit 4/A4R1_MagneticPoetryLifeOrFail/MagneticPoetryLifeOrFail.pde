@@ -1,7 +1,8 @@
-//Word being pointed by pedal to the right is where the poem starts
+//The word/ letter "A" to the right is where the poem starts regularly but...
+//You can start this poem either way honestly so you choose the way you read it.
 //As this is magnetic poetry you can create new wordings with this and may be ablt to create a whole new poem
 //This is a self made poem
-PFont font;
+//The words can stick to eachother as a message to show that life is about challlenges and overcoming them
 String[] words = {"A", "reason", "to", "fail", "is", "another", "reason", "to", "sprout", "A", "reason", "to", "Stop", "is", "another", "reason", "to", "go", "A", "reason", "to", "fall", "is", "another", "reason", "to", "get", "up", "But", "there's", "no", "reason", "to" , "give", "up", "because", "the", "only", "way", "is", "to", "keep", "on", "going"};
 Word[] wordObjects;
 float angle;
@@ -9,8 +10,6 @@ float angle;
 void setup() {
   size(800, 800);
   background(255);
-  font = createFont("Arial", 16);
-  textFont(font);
   textAlign(CENTER, CENTER);
   //Word length
   angle = TWO_PI / words.length;
@@ -31,7 +30,7 @@ void draw() {
   fill(172, 172, 172);
   for (int i = 0; i < 8; i++) {
     pushMatrix();
-    rotate(PI/4 * i);
+    rotate(PI/3 * i);
     ellipse(0, -height/8, 37, 206);
     popMatrix();
   }
@@ -68,6 +67,8 @@ class Word {
   }
   //Words being able to be dragged
   void drag() {
+    //The && was interesting as I learned it's used to combine 2 conditions
+    //Both conditions are not true meaning it to be false
     if (mousePressed && dist(mouseX, mouseY, x, y) < 20) {
       x = mouseX;
       y = mouseY;
