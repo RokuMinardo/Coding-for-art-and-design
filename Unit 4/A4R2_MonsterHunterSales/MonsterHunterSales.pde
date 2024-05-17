@@ -119,8 +119,8 @@ void drawL() {
     color(#2b6bf3), color(#a59834), color(#ea420d),
     color(#6ad268), color(#8868d2)};
   for (int i = 0; i < mh.length; i++) {
-    int labelX = lX + lMargin;
-    int labelY = lY + lMargin + i * 20;
+    int labelX = lX + lMargin; //Legend x
+    int labelY = lY + lMargin + i * 20; //Legend y
     int box = 10;
 
     fill(colors[i]);
