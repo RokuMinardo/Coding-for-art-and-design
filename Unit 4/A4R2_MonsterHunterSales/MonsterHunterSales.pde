@@ -20,6 +20,8 @@ void setup(){
    int[] colors = {color(#f3d02b), color(#2bdbf3), 
    color(#2b6bf3), color(#a59834), color(#ea420d),
    color(#6ad268), color(#8868d2)};
+   
+   
 //Was having soo much trouble implementing the bar graph on click opening the link to the MH wiki
 //At first I had only 1 draw function having everything in draw.
 //But I realized that anything in the class won't work if it's not in the code globally
@@ -41,8 +43,10 @@ void draw(){
   
   
   image(mhI, -209,17);
+  
   //draw out graph globally
   bar.draw();
+  
   //draw out legensd
   drawL();
 }
@@ -69,10 +73,11 @@ class BG{ //class for the bar
     this.colors = colors;
     this. url = url;
   }
+  
 //Mouse clicks for the bars
 void mouseClicked(){
   for (int i = 3; i < mh.length; i++){
-    int x = 50 + i * (bWidth + 14);
+    int x = 50 + i * (bWidth + 16);
     int y = height - sales[i] * 14;
     int bHeight = sales[i] * 15;
     
@@ -94,9 +99,9 @@ void mouseClicked(){
     //Doing this whole line of code was weird as I had to learn more about well height and length in a litmited amount of time.
     //Didn't perfect it but this give me what I want. Hoping to get better with loops
     for (int i = 0; i < mh.length; i++){
-      int x = 50 + i * (bWidth + 21); // horizontal position (This one was weird)
-      int y = height - sales[i] * 10; // Vertical position of the bar
-      int bHeight = sales[i] * 10; //Height of the bar
+      int x = 50 + i * (bWidth + 22); // horizontal position (This one was weird)
+      int y = height - sales[i] * 11; // Vertical position of the bar
+      int bHeight = sales[i] * 15; //Height of the bar
       
       fill(colors[i]); //colors for each game
       rect(x, y, bWidth, bHeight);
