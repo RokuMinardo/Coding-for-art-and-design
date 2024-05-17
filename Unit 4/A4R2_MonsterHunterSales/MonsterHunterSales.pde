@@ -8,10 +8,14 @@
 //BG will mean bar graph
 //mh = Monster Hunter
 BG bar; //At first I didn't call this globally but I was having problems
+PImage mhI;
 
-void setup() {
-   size(800,500);
+
+void setup(){
+   size(800,600);
    String[] mh = {"MH", "MH2", "MH3", "MH4", "MHGen", "MHW", "MHR"};
+   mhI = loadImage("MonsterHunter.png");
+   
    int[] sales = {2, 7, 9, 8, 9, 37, 23}; //Sales by thousands
    int[] colors = {color(#f3d02b), color(#2bdbf3), 
    color(#2b6bf3), color(#a59834), color(#ea420d),
@@ -32,44 +36,51 @@ void setup() {
 //Graph properties
  bar = new BG(mh, sales, colors, url); //Creating bg
 }
-void draw() {
-  background(255);
+void draw(){
+  background(150);
+  
+  
+  image(mhI, -209,17);
   //draw out graph globally
   bar.draw();
   //draw out legensd
   drawL();
 }
 //The mouseClicked was another thing because I had to add this globally and within the class as the assignment was to have a class.
-void mouseClicked() {
+void mouseClicked(){
+  
   bar.mouseClicked();
 }
 
 //I have learned that when I have my bar graph in class I cannot tweak unless I'm changing what's inside of the class
 //Since adding at least one class is in the assignment I'll keep his and tweak it old fashion
-class BG { //class for the bar 
-  String[] mh;
+class BG{ //class for the bar 
+  
   int[] sales;
   int[] colors;
-  int bWidth = 70; //Size of the bar
+  int bWidth = 76; //Size of the bar
+  
+  String[] mh;
   String[] url; //For URLs
   
-  BG(String[] mh, int[] sales, int[] colors, String[]url) {
+  BG(String[] mh, int[] sales, int[] colors, String[]url){
     this.mh = mh;
     this.sales = sales;
     this.colors = colors;
     this. url = url;
   }
 //Mouse clicks for the bars
-void mouseClicked() {
-  for (int i = 0; i < mh.length; i++) {
-    int x = 50 + i * (bWidth + 10);
-    int y = height - sales[i] * 10;
-    int bHeight = sales[i] * 10;
+void mouseClicked(){
+  for (int i = 3; i < mh.length; i++){
+    int x = 50 + i * (bWidth + 14);
+    int y = height - sales[i] * 14;
+    int bHeight = sales[i] * 15;
+    
   //Mouse clicks directly to the bars  
-    if (mouseX >= x) {
-      if (mouseX <= x + bWidth) {
+    if (mouseX >= x){
+      if (mouseX <= x + bWidth){
         if (mouseY >= y) { //I had this code to be mouseY > = y and was wondering why it wasn't working and well the problem was the space PFFFT
-          if (mouseY <= y + bHeight) {
+          if (mouseY <= y + bHeight){
             link(url[i]); 
           }
         }
@@ -79,18 +90,18 @@ void mouseClicked() {
 }
 
   
- void draw() {
+ void draw(){
     //Doing this whole line of code was weird as I had to learn more about well height and length in a litmited amount of time.
     //Didn't perfect it but this give me what I want. Hoping to get better with loops
-    for (int i = 0; i < mh.length; i++) {
-      int x = 50 + i * (bWidth + 10); // horizontal position (This one was weird)
+    for (int i = 0; i < mh.length; i++){
+      int x = 50 + i * (bWidth + 21); // horizontal position (This one was weird)
       int y = height - sales[i] * 10; // Vertical position of the bar
       int bHeight = sales[i] * 10; //Height of the bar
+      
       fill(colors[i]); //colors for each game
       rect(x, y, bWidth, bHeight);
       fill(0);
-      text(mh[i], x + bWidth / 4, height - 10); // Monster Hunter Label
-      
+      text(mh[i], x + bWidth /3, height - 3); // Monster Hunter Label  
     }
   }
 }
@@ -98,16 +109,16 @@ void mouseClicked() {
   
  //Size of the legend and location 
  //l = legend
-void drawL() {
-  int lX = 650; 
-  int lY = 100; 
-  int lWidth = 100;
-  int lHeight = 200; 
-  int lMargin = 20; 
+void drawL(){
+  int lX = 696; 
+  int lY = 146; 
+  int lWidth = 92;
+  int lHeight = 169; 
+  int lMargin = 22; 
 
   // Legend for Monster Hunter
   
-  fill(255);
+  fill(214);
   stroke(0);
   rect(lX, lY, lWidth, lHeight);
 
@@ -118,7 +129,8 @@ void drawL() {
   int[] colors = {color(#f3d02b), color(#2bdbf3), 
     color(#2b6bf3), color(#a59834), color(#ea420d),
     color(#6ad268), color(#8868d2)};
-  for (int i = 0; i < mh.length; i++) {
+  for (int i = 0; i < mh.length; i++){
+    
     int labelX = lX + lMargin; //Legend x
     int labelY = lY + lMargin + i * 20; //Legend y
     int box = 10;
