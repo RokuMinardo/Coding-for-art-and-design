@@ -72,7 +72,7 @@ class Word{
   //Constructor
   Word(String text2, float x2, float y2){
     //I learned from my friend that I can use the this keyword which is used when variables and parameters have the same name
-    
+    //I didn't use it as 
     text = text2;
     x = x2;
     y = y2;
@@ -86,8 +86,11 @@ class Word{
   
   //Words being able to be dragged
   void drag(){
-    //The && was interesting as I learned it's used to combine 2 conditions
+    //The && was interesting as I learned it's used to combine 2 conditions/ if statements
     //Both conditions are not true meaning it to be false
+     //if(mousePressed) { if (dist(mouseX, mouseY, x, y) < 20) { 
+       //}
+       //}
     if (mousePressed && dist(mouseX, mouseY, x, y) < 20){
       x = mouseX;
       y = mouseY;
