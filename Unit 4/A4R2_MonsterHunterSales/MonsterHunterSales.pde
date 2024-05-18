@@ -13,7 +13,7 @@ PImage mhI;
 
 void setup(){
    size(800,600);
-   String[] mh = {"MH", "MH2", "MH3", "MH4", "MHGen", "MHW", "MHR"};
+   String[] mh = {"MH", "MH2", "MH3", "MH4", "Gen", "World", "Rise"};
    mhI = loadImage("MonsterHunter.png");
    
    int[] sales = {2, 7, 9, 8, 9, 37, 23}; //Sales by thousands
@@ -62,7 +62,7 @@ class BG{ //class for the bar
   
   int[] sales;
   int[] colors;
-  int bWidth = 76; //Size of the bar
+  int bWidth = 79; //Size of the bar
   
   String[] mh;
   String[] url; //For URLs
@@ -77,9 +77,9 @@ class BG{ //class for the bar
   
 //Mouse clicks for the bars
 void mouseClicked(){
-  for (int i = 3; i < mh.length; i++){
-    int x = 50 + i * (bWidth + 16);
-    int y = height - sales[i] * 14;
+  for (int i = 0; i < mh.length; i++){
+    int x = 50 + i * (bWidth + 10);
+    int y = height - sales[i] * 12;
     int bHeight = sales[i] * 15;
     
   //Mouse clicks directly to the bars  
@@ -100,8 +100,8 @@ void mouseClicked(){
     //Doing this whole line of code was weird as I had to learn more about well height and length in a litmited amount of time.
     //Didn't perfect it but this give me what I want. Hoping to get better with loops
     for (int i = 0; i < mh.length; i++){
-      int x = 50 + i * (bWidth + 22); // horizontal position (This one was weird)
-      int y = height - sales[i] * 11; // Vertical position of the bar
+      int x = 50 + i * (bWidth + 10); // horizontal position (This one was weird)
+      int y = height - sales[i] * 12; // Vertical position of the bar
       int bHeight = sales[i] * 15; //Height of the bar
       
       fill(colors[i]); //colors for each game
@@ -131,7 +131,7 @@ void drawL(){
   //Legend Labels and colored boxes
   //Legend to the right
   String[] mh = {"MH", "MH2", "MH3", "MH4", 
-  "MHGen", "MHW", "MHR"};
+  "Gen", "World", "Rise"};
   int[] colors = {color(#f3d02b), color(#2bdbf3), 
     color(#2b6bf3), color(#a59834), color(#ea420d),
     color(#6ad268), color(#8868d2)};

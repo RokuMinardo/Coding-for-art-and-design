@@ -17,8 +17,8 @@ float angle;
 
 void setup(){
   size(800, 900);
-  background(150);
   textAlign(CENTER, CENTER);
+  textSize(15);
   //Word length
   angle = TWO_PI /words.length;
   Objects = new Word[words.length];
@@ -32,6 +32,7 @@ void setup(){
 }
 
 void draw(){
+  background(150);
   
   translate(width/2, height/2);
   
@@ -91,9 +92,14 @@ class Word{
      //if(mousePressed) { if (dist(mouseX, mouseY, x, y) < 20) { 
        //}
        //}
-    if (mousePressed && dist(mouseX, mouseY, x, y) < 20){
-      x = mouseX;
-      y = mouseY;
+       float MouseX2 = mouseX - width/2;
+       float MouseY2 = mouseY - height/2;
+       
+    if (mousePressed && dist(MouseX2, MouseY2, x - width/2, y - height/2) < 20) {
+      //x = mouseY;
+     // y = mouseY;
+     x = MouseX2 + width/2;
+     y = MouseY2 + height/2;
       dragged = true;
     } else {
       dragged = false;
