@@ -50,7 +50,7 @@ void draw(){
   //draw out legensd
   drawL();
 }
-//The mouseClicked was another thing because I had to add this globally and within the class as the assignment was to have a class.
+//The mouseClicked was another thing, I had to add this globally and within the class as the assignment was to have a class.
 void mouseClicked(){
   
   bar.mouseClicked();
@@ -69,6 +69,7 @@ class BG{ //class for the bar
   
   BG(String[] mh2, int[] sales2, int[] colors2, String[]url2){
     //For these codes I can also use the "this" keyword as I learned from my friend
+    //but I for some reason like this way better as I feel more organized this way
     mh = mh2;
     sales= sales2;
     colors = colors2;
