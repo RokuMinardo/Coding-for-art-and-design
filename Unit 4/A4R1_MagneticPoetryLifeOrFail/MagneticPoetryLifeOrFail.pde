@@ -72,7 +72,7 @@ class Word{
   //Constructor
   Word(String text2, float x2, float y2){
     //I learned from my friend that I can use the this keyword which is used when variables and parameters have the same name
-    //I didn't use it as 
+    //Would it be better if I used this?
     text = text2;
     x = x2;
     y = y2;
