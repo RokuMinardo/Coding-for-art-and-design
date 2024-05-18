@@ -67,11 +67,12 @@ class BG{ //class for the bar
   String[] mh;
   String[] url; //For URLs
   
-  BG(String[] mh, int[] sales, int[] colors, String[]url){
-    this.mh = mh;
-    this.sales = sales;
-    this.colors = colors;
-    this. url = url;
+  BG(String[] mh2, int[] sales2, int[] colors2, String[]url2){
+    //For these codes I can also use the "this" keyword as I learned from my friend
+    mh = mh2;
+    sales= sales2;
+    colors = colors2;
+    url = url2;
   }
   
 //Mouse clicks for the bars

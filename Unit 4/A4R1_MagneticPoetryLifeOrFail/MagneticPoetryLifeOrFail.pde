@@ -3,6 +3,7 @@
 //As this is magnetic poetry you can create new wordings with this and may be ablt to create a whole new poem
 //This is a self made poem
 //The words can stick to eachother as a message to show that life is about challlenges and overcoming them
+//I also got help from a friend who knows java who goes to Binghinton I believe? He's cool.
 String[] words = {"A", "reason", "to", "fail", "is", "another", 
 "reason", "to", "sprout", "A", "reason", "to", "Stop", "is", 
 "another", "reason", "to", "go", "A", "reason", "to", "fall", 
@@ -69,10 +70,12 @@ class Word{
   
   
   //Constructor
-  Word(String text, float x, float y){
-    this.text = text;
-    this.x = x;
-    this.y = y;
+  Word(String text2, float x2, float y2){
+    //I learned from my friend that this. is used when variables and parameters have the same name
+    
+    text = text2;
+    x = x2;
+    y = y2;
   }
   
   //Discplay text at location
