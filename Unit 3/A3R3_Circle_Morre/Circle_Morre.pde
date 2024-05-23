@@ -1,5 +1,6 @@
 //Eye bleeding circle
-
+//A simple piece
+//Learned lots about loops and love making them now
 void setup() {
   size(500,500);
     background(255);

@@ -1,5 +1,6 @@
  //Hold image
  //simple code for my minardo clock images translported to the calendar
+ //At month 11 and 12, things gets weird hehe
  PImage img;
  int currentMinardo;
  //Minardo Images. Every month the image changes with the corresponding month number

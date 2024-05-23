@@ -43,23 +43,23 @@ void setup() {
   //If Pharaoh = true or false
   //I wonder how I can add special abilities for different characters
   
-  p1Servants.add(new Card("Pharaoh", 1000, 3000, 1, true));
-  p1Servants.add(new Card("Asfet:The Fallen", 2000, 1700, 1, false));
-  p1Servants.add(new Card("Mummy Gal", 1500, 3, 3, false));
-  p1Servants.add(new Card("Currupted One", 200, 5000, 1, false));
-  p1Servants.add(new Card("Successor of Ra", 1500, 3000, 1, false));
-  p1Servants.add(new Card("Bladed One", 300, 500, 2, false));
-  p1Servants.add(new Card("Phant:Prideful", 500, 4000, 1, false));
-  p1Servants.add(new Card("Stone:Willed", 500, 3500, 5, false));
+  p1Servants.add(new Card("Pharaoh", 1000, 3000, 1, true, color(#c6d50a)));
+  p1Servants.add(new Card("Asfet:The Fallen", 2000, 1700, 1, false, color(#d80505)));
+  p1Servants.add(new Card("Mummy Gal", 1500, 3, 3, false, color(#d80505)));
+  p1Servants.add(new Card("Currupted One", 200, 5000, 1, false, color(#d80505)));
+  p1Servants.add(new Card("Successor of Ra", 1500, 3000, 1, false, color(#d80505)));
+  p1Servants.add(new Card("Bladed One", 300, 500, 2, false, color(#d80505)));
+  p1Servants.add(new Card("Phant:Prideful", 500, 4000, 1, false, color(#d80505)));
+  p1Servants.add(new Card("Stone:Willed", 500, 3500, 5, false, color(#d80505)));
 
-  p2Servants.add(new Card("Pharaoh", 1000, 3000, 1, true));
-  p2Servants.add(new Card("Asfet:The Fallen", 2000, 1700, 1, false));
-  p2Servants.add(new Card("Mummy Gal", 1500, 3, 3, false));
-  p2Servants.add(new Card("Currupted One", 200, 5000, 1, false));
-  p2Servants.add(new Card("Successor of Ra", 1500, 3000, 1, false));
-  p2Servants.add(new Card("Bladed One", 300, 500, 2, false));
-  p2Servants.add(new Card("Phant:Prideful", 500, 4000, 1, false));
-  p2Servants.add(new Card("Stone:Willed", 500, 3500, 5, false));
+  p2Servants.add(new Card("Pharaoh", 1000, 3000, 1, true, color(#ff8a0f)));
+  p2Servants.add(new Card("Asfet:The Fallen", 2000, 1700, 1, false, color(#1405d8)));
+  p2Servants.add(new Card("Mummy Gal", 1500, 3, 3, false, color(#1405d8)));
+  p2Servants.add(new Card("Currupted One", 200, 5000, 1, false, color(#1405d8)));
+  p2Servants.add(new Card("Successor of Ra", 1500, 3000, 1, false, color(#1405d8)));
+  p2Servants.add(new Card("Bladed One", 300, 500, 2, false, color(#1405d8)));
+  p2Servants.add(new Card("Phant:Prideful", 500, 4000, 1, false, color(#1405d8)));
+  p2Servants.add(new Card("Stone:Willed", 500, 3500, 5, false, color(#1405d8)));
 
   // Starting card placement
   for (int i = 0; i < p1Servants.size(); i++) {

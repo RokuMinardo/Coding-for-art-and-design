@@ -9,20 +9,22 @@ class Card {
   boolean isFelled; //defeated
   float tX, tY; //Target x and y coordinates
   float speed = 35;//speed of animation
+  color cC; //cc is card color
 
 //Where card properties will be
 //stats, name is name, display card
-  Card(String name, int attack, int defense, int reach, boolean isPharaoh) {
+  Card(String name, int attack, int defense, int reach, boolean isPharaoh, color cC) {
     this.name = name;
     this.attack = attack;
     this.defense = defense;
     this.reach = reach;
     this.isPharaoh = isPharaoh;
+    this.cC = cC;
   }
 
   void display() {
     if (!isDragging) {
-      fill(#f9cf00);
+      fill(cC);
       rect(x, y, 90, 70);
       fill(0);
       text(name, x + 5, y + 15);

@@ -114,6 +114,7 @@ void draw() {
     ellipse(dotX, dotY, 98, 98);
 
     // Show current time
+    //Added this so you have a visual of the minute going up and as the minute is up the music resets. It was to help me to see if it actually workrd(Even though I have the time on my computer 
     fill(0);
     textSize(16);
     textAlign(CENTER, CENTER);
